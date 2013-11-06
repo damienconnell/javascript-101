@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 4 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+			var first
+			var second
+
+			first = getInputAsNumber("firstBox")
+			second = getInputAsNumber("secondBox")
+
+			sum = first + second
+
+			setOutput("sumBox", sum)
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Type two numbers and click go. Their sum will appear below. <br>
+		<br>Input values:<br>
+		First number <input id="firstBox"><br>
+		Second number <input id="secondBox"><br>
+		<input type="submit" value="GO!!" onclick="calculate()"><br> 
+
+		Output value: <br>
+		Sum: <input id="sumBox">
+
+	</body>
+</html>

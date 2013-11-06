@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 9 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate(code)
+		{
+			var first
+			var second
+			var third 
+			var fourth 
+			var fifth 
+			var high 
+
+			first = getInputAsNumber("firstBox")
+			second = getInputAsNumber("secondBox")
+			third = getInputAsNumber("thirdBox")
+			fourth = getInputAsNumber("fourthBox")
+			fifth = getInputAsNumber("fifthBox")
+
+			high = first
+
+		    if (high < second)
+		    {
+		    	high = second
+		    }
+
+			if (high < third)
+		    {
+		    	high = third
+		    }
+
+		    if (high < fourth)
+		    {
+		    	high = fourth
+		    }
+
+		    if (high < fifth)
+		    {
+		    	high = fifth
+		    }
+
+
+			setOutput("highBox", high)
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Type five numbers and click go. The highest of the five will appear.  <br>
+		<br>Input values:<br>
+		First number <input id="firstBox"><br>
+		Second number <input id="secondBox"><br>
+		Third number <input id="thirdBox"><br>
+		Fourth number <input id="fourthBox"><br>
+		Fifth number <input id="fifthBox"><br>
+
+		<input type="submit" value="Go!" onclick="calculate()">
+		<br>
+		Output value: <br>
+		Result: <input id="highBox">
+
+	</body>
+</html>

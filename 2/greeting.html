@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 4 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+			var firstName
+			var lastName
+			var fullName
+
+			firstName = getInputAsText("firstNameBox")
+			lastName = getInputAsText("lastNameBox")
+			fullname = firstName + " " + lastName
+			setOutput("fullNameBox", fullname)
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Type a first and last name, and click go. A greeting will appear. 
+		<br>
+		Input Values: <br>
+		First Name: <input id="firstNameBox"><br>
+		Last Name: <input id="lastNameBox"><br>
+		<input type="submit" value="go" onclick="calculate()"><br>
+		Happy New Year: <input id="fullNameBox"><br>
+
+
+	</body>
+</html>

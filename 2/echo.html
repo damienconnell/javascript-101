@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 3 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+			//declare variable
+			var echoThis
+
+			//get variable's value
+			echoThis = getInputAsText("echoThisBox")
+
+			//popup the value of echoThis
+			alert(echoThis) 
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Type something and click go. A popup will appear, echoing what you typed. <br>
+		<br>
+		Input Value: <br>
+		Type Here: <input id="echoThisBox"><br>
+		<input type="submit" value="go" onclick="calculate()"><br>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 10 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+		var amt1	
+		var amt2 
+		var amt3
+		var servings 
+		var servingsNeeded
+
+		amt1 = getInputAsNumber("amt1Box")
+		amt2 = getInputAsNumber("amt2Box")
+		amt3 = getInputAsNumber("amt3Box")
+		servings = getInputAsNumber("servingsBox")
+		servingsNeeded = getInputAsNumber("servingsNeededBox")
+
+		amt1 = amt1 / servings * servingsNeeded
+		amt2 = amt2 / servings * servingsNeeded
+		amt3 = amt3 / servings * servingsNeeded
+
+		servings = servingsNeeded
+
+		setOutput("amt1Box", amt1)
+		setOutput("amt2Box", amt2)
+		setOutput("amt3Box", amt3)
+		setOutput("servingsBox", servings)
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Here's the recipe for a breakfast cereal <br><br>
+		To change the recipe for a different number of servings:<br>
+		Type the amount of each ingredient.<br> 
+		Type the number of servings that you want to make.<br>
+		Click go.<br>
+		Converted amounts will appear where the original amounts were typed<br>
+		<br>
+		Input and values: <br>
+		For this many servings <input id="servingsBox" value="1">, I need<br>
+		Cheerios, cups: <input id="amt1Box" value="2"><br>
+		Milk, ounces: <input id="amt2Box" value="5"><br>
+		Sugar, tsp: <input id="amt3Box" value="3"><br>
+		I want to make this many servings: <input id="servingsNeededBox"><br>
+
+		<input type="submit" value="go" onclick="calculate()"><br><br>
+		
+
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 5 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+			var myAns1
+			var myAns2
+			var myAns3
+			var myResult1
+			var myResult2
+			var myResult3
+			var score
+
+			myAns1 = getInputAsText("myAns1Box")
+			myAns2 = getInputAsText("myAns2Box")
+			myAns3 = getInputAsText("myAns3Box")
+
+			score = 0
+
+			if (myAns1 == "48")
+			{
+				score = score + 1
+				myResult1 = "Correct!"
+			}
+
+			else
+			{
+				myResult1 = "Wrong! The answer is 48"
+			}
+
+			if (myAns2.toLowerCase() == "ludo")
+			{
+				score = score + 1
+				myResult2 = "Correct!"
+			}
+
+			else 
+			{
+				myResult2 = "Wrong! The answer is Ludo"
+			}
+
+			if (myAns3.toLowerCase() == "omar")
+			{
+				score = score + 1
+				myResult3 = "Correct!"
+			}
+
+			else
+			{
+				myResult3 = "Wrong! The answer is Omar"
+			}
+
+			setOutput("myResult1Box", myResult1)
+			setOutput("myResult2Box", myResult2)
+			setOutput("myResult3Box", myResult3)
+			setOutput("scoreBox", score + " out of 3")
+
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Answer the three questions and press go. <br>
+		Your score will appear. <br>
+		<br>
+		Input values: <br>
+		1. What is 8 x 6? <input id="myAns1Box"><br>
+		2. What is Omar's brother's name? <input id="myAns2Box"><br>
+		3. What is Ludo's brother's name? <input id="myAns3Box"><br>
+		<input type="submit" value="go" onclick="calculate()"><br><br>
+		Output value: <br>
+		Result #1: <input id="myResult1Box" size=50><br>
+		Result #2: <input id="myResult2Box" size=50><br>
+		Result #3: <input id="myResult3Box" size=50><br>
+		Your score: <input id="scoreBox" size=50><br>
+
+	</body>
+</html>

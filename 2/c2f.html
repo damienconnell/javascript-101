@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>
+			COMSC 100 ASSIGNMENT 5 BY Damien Connell B00056409
+		</title>
+		<script>
+		function getInputAsText(_id){return document.getElementById(_id).value}
+		function getInputAsNumber(_id){return parseFloat(document.getElementById(_id).value)}
+		function setOutput(_id, _value) {document.getElementById(_id).value = _value}
+
+		function calculate()
+		{
+			var c
+			var f
+
+			c = getInputAsNumber("cBox")
+			f = 1.8 * c + 32
+
+			setOutput("fBox", f)	
+		}
+		</script>
+	</head>
+
+	<body>
+		Instructions: <br>
+		Type a temperature in degrees Centigrade and click Go. The equal temperature in Farenheit will appear. <br>
+
+		Input value: <br>
+		Degrees C <input id="cBox"><br>
+		<input type="submit" value="GO!!" onclick="calculate()"><br> 
+
+		Output Value: <br>
+		Degrees F <input id="fBox"><br>
+	</body>
+</html>
